@@ -25,7 +25,7 @@
                     <a href="{{ route('admin.tahunAjaran.index') }}" class="d-block mb-1">Tahun Ajaran</a>
                     <a href="{{ route('admin.jurusan.index') }}" class="d-block">Jurusan</a>
                     <a href="{{ route('admin.tingkat.index') }}" class="d-block">Tingkat</a>
-                    <a href="#" class="d-block">Rombel</a>
+                    <a href="{{ route('admin.rombel.index') }}" class="d-block">Rombel</a>
                     <a href="#" class="d-block">Kategori Pembayaran</a>
                     <a href="#" class="d-block">Data Siswa</a>
                 </div>

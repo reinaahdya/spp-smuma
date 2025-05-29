@@ -6,5 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class rombel extends Model
 {
-    protected $fillable = ['rombel', 'tahun_ajaran_id', 'jurusan_id'];
+    protected $fillable = ['rombel', 'tingkat_id', 'jurusan_id'];
+
+    public function tingkat()
+    {
+        return $this->belongsTo(Tingkat::class, 'tingkat_id');
+    }
+    public function jurusan()
+    {
+        return $this->belongsTo(jurusan::class, 'jurusan_id');
+    }
 }
