@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\JurusanController;
-use App\Http\Controllers\Admin\TahunAjaranController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\JurusanController;
+use App\Http\Controllers\Admin\TingkatController;
+use App\Http\Controllers\Admin\TahunAjaranController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -43,6 +44,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/edit/{id}', [JurusanController::class, 'edit'])->name('admin.jurusan.edit');
         Route::put('/update/{id}', [JurusanController::class, 'update'])->name('admin.jurusan.update');
         Route::delete('/destroy/{id}', [JurusanController::class, 'destroy'])->name('admin.jurusan.destroy');
+    });
+
+    // Tingkat
+    Route::prefix('tingkat')->group(function () {
+        Route::get('/', [TingkatController::class, 'index'])->name('admin.tingkat.index');
+        Route::get('/create', [TingkatController::class, 'create'])->name('admin.tingkat.create');
+        Route::post('/store', [TingkatController::class, 'store'])->name('admin.tingkat.store');
+        Route::get('/edit/{id}', [TingkatController::class, 'edit'])->name('admin.tingkat.edit');
+        Route::put('/update/{id}', [TingkatController::class, 'update'])->name('admin.tingkat.update');
+        Route::delete('/destroy/{id}', [TingkatController::class, 'destroy'])->name('admin.tingkat.destroy');
     });
 });
 Route::middleware(['auth', 'role:siswa'])->group(function () {
