@@ -48,4 +48,17 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    const ROLE_ADMIN = 'admin';
+    const ROLE_SISWA = 'siswa';
+
+    // Definisikan role pengguna
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+    public function isSiswa()
+    {
+        return $this->role === 'siswa';
+    }
 }

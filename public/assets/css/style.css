@@ -1,0 +1,128 @@
+
+      body {
+        background-color: #e0f2f7;
+        font-size: 14px;
+      }
+
+      .sidebar {
+        background-color: #b2ebf2;
+        padding: 15px;
+        border-radius: 5px;
+        min-height: 100vh;
+      }
+
+      .sidebar-header {
+        background-color: #64B5F6;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .sidebar-menu a {
+        display: block;
+        padding: 8px;
+        margin-bottom: 5px;
+        background-color: #64B5F6;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+
+      .sidebar-menu a:hover {
+        background-color: #4dd0e1;
+      }
+
+      .sidebar-menu-link {
+        background-color: #80deea;
+        padding: 8px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+      }
+
+      .sidebar-menu-link:hover {
+        background-color: #4dd0e1;
+      }
+
+      #pembayaranDropdown a {
+        background-color: transparent;
+        padding: 4px 0;
+        color: #000;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      #masterDropdown a {
+        background-color: transparent;
+        padding: 4px 0;
+        color: #000;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      #pembayaranDropdown a:hover {
+        text-decoration: underline;
+      }
+
+      .content-header {
+        background-color: #b2ebf2;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .content-header h2 {
+        font-size: 20px;
+        margin: 0;
+      }
+
+      .content-header p {
+        font-size: 13px;
+        margin: 0;
+      }
+
+      .payment-options {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .payment-card {
+        background-color: #80deea;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        width: 180px;
+        font-size: 13px;
+        flex: 1 1 180px;
+      }
+
+      .payment-card img {
+        max-width: 60px;
+        margin-bottom: 8px;
+      }
+
+      .btn-sm {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+
+      @media (max-width: 768px) {
+        .payment-options {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .payment-card {
+          width: 100%;
+          max-width: 320px;
+        }
+      }
